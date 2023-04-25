@@ -1,0 +1,59 @@
+/* PHASE 1: Header */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+/* Header styles */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  background-color: #ff0000;
+}
+
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 960px;
+}
+
+.header-logo {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.header-list {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header-list li {
+  margin-left: 20px;
+}
+
+.header-list li:first-child {
+  margin-left: 0;
+}
+
+.header-list a {
+  display: block;
+  padding: 15px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.header-list a:hover {
+  background-color: #ffffff;
+  color: #ff0000;
+}
