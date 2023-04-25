@@ -89,5 +89,35 @@ return transposed;
 //     }
 //     return transposedArray;
 //   }
-  const arr = [[1,2,3], [4,5,6], [7,8,9]];
-  console.log(arr.transpose());
+//   const arr = [[1,2,3], [4,5,6], [7,8,9]];
+//   console.log(arr.transpose());
+
+Array.prototype.myEach = function(cb){
+    for(i=0; i < this.length; i++){
+        cb(this[i]);
+    }
+}
+
+Array.prototype.myMap = function(cb){
+    const new_arr = [];
+    this.myEach(function(ele){
+        new_arr.push(cb(ele))
+    })
+    return new_arr;
+}
+
+Array.prototype.myReduce = function(cb, initialVal) {
+    let finalVal = 0
+    if (initialVal === null){
+        this.myEach(function(ele){
+            finalVal += ele;
+        }) } 
+        else {
+        finalVal = initialVal
+        this.myEach(function(ele){
+            finalVal += ele;
+        })
+    }
+    return finalVal
+}
+
